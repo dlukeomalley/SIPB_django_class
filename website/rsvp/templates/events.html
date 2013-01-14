@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+      <h1>All Events</h1>
+      <hr>
+      {% for event in events %}
+      <h3>{{ event.title }}</h3>
+      <p>{{ event.description }}</p>
+      {% endfor %}
+
+      <h1>Add Event</h1>
+      <hr>
+      <form action="/post_event/" method="post">{% csrf_token %}
+	{{ form.as_p }}
+	<input type="submit" value="Submit"/>
+      </form>
+{% endblock%}
