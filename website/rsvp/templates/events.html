@@ -3,13 +3,24 @@
 {% block content %}
       <h1>All Events</h1>
       <hr>
-      <ol>
-
+      <table class="table table-striped">
+	<thead>
+	  <tr>
+	    <th>Title</th>
+	    <th>Date</th>
+	    <th>Description</th>
+	    <th>Location</th>
+	  </tr>
+	</thead>
+	<tbody>
       {% for event in events %}
-      <li>
-      <p>{{ event.title }}: {{ event.description }}</p>
-      </li>
+      <tr>
+	<td>{{ event.title }}</td>
+	<td>{{ event.date }}</td>
+	<td>{{ event.description }}</td>
+	<td>{{ event.location }}</td>
+      </tr>
       {% endfor %}
-
-      </ol>
+	</tbody>
+      </table>
 {% endblock%}

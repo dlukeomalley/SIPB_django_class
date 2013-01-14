@@ -4,9 +4,9 @@
 
       <h1>Register Event</h1>
       <hr>
-      <form action="/post_event/" method="post">{% csrf_token %}
+      <form action="/api/post_event/" method="post" class="form-horizontal">{% csrf_token %}
 	{{ form.as_p }}
-	<input type="submit" value="Submit"/>
+	<input type="submit" value="Submit" class="btn"/>
       </form>
 
 {% endblock%}

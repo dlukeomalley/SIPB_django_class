@@ -6,6 +6,8 @@ from django.forms import ModelForm
 class Event(models.Model):
     title = models.CharField(max_length=128)
     description = models.TextField()
+    date = models.DateField()
+    location = models.CharField(max_length=128)
 
     def __unicode__(self):
         return self.title
