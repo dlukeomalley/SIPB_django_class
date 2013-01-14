@@ -8,6 +8,7 @@ urlpatterns = patterns('',
     # Examples:
     url(r'^$', 'event.views.home', name='home'),
     url(r'^events/$', 'event.views.all_events', name='all events'),
+    url(r'^register/$', 'event.views.register', name='register'),
 
     # Uncomment the admin/doc line below to enable admin documentation:
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),

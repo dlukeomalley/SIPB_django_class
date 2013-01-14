@@ -9,7 +9,7 @@ def home(request):
 # View to return all events
 def all_events(request):
     events = Event.objects.all()
-    return render(request, 'events.html', {'events': events, 'form': EventForm()})
+    return render(request, 'events.html', {'events': events})
 
-def post_event(request):
-    pass
+def register(request):
+    return render(request, 'register.html', {'form': EventForm()})
